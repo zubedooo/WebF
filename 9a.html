@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="">
+
+My favorite book is:
+<select ng-model="myVar">
+  <option value="hp">Harry Potter
+  <option value="con">Chronicles of Narnia
+  <option value="ham">Hamlet
+</select>
+
+<hr>
+<div ng-switch="myVar">
+  <div ng-switch-when="hp">
+ 	<h1>Harry Potter</h1>
+ 	<p>Harry Potter is a series of fantasy novels written by British author J. K. Rowling.</p>
+  </div>
+  <div ng-switch-when="con">
+ 	<h1>Chronicles of Narnia</h1>
+ 	<p>The Chronicles of Narnia is a series of films based on The Chronicles of Narnia, a series of novels by C. S. Lewis.</p>
+  </div>
+  <div ng-switch-when="ham">
+ 	<h1>Hamlet</h1>
+ 	<p>The Tragedy of Hamlet, Prince of Denmark  is a tragedy written by William Shakespeare.</p>
+  </div>
+  <div ng-switch-default>
+ 	<h1>Switch</h1>
+ 	<p>Select topic from the dropdown, to switch the content of this DIV.</p>
+  </div>
+</div>
+</body>
+</html>
