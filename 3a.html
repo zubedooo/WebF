@@ -1,30 +1,45 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Week 6</title>
-<script type="text/javascript" src="/BEE13EF2-28BB-CB4E-A49D-4A6FB0352DD0/main.js" charset="UTF-8"></script></head>
-<body>
-	<h2>Calculator prototype</h2>
-</body>
+<html><body><script>
+var BaseCalculator = function() {
+   this.type="BaseCalc"
+   }
 
-<script type="text/javascript">
-	class Calculator{
-		constructor(num){
-			this.cur_num=num
-		}
-	}
-	Calculator.prototype.add=function(num){
-		this.cur_num=this.cur_num+num
-		return this
-	}
-	Calculator.prototype.subtract=function(num){
-		this.cur_num=this.cur_num-num
-		return this
-	}
-	Calculator.prototype.getAnswer=function(){
-		return this.cur_num;
-	}
-console.log(new Calculator(2).add(2).add(2).subtract(3).getAnswer());
-</script>
+BaseCalculator.prototype = {
+   add: function(x, y)
+   {
+   	return x + y
+   },
+   sub: function(x, y)
+   {
+   	return x - y
+   }
+}
 
-</html>
+var Calculator = function () {
+   this.type="Calc"
+   this.mul = function(x,y) {return x*y}
+   this.div = function(x,y) {return x/y}
+   this.mod = function(x,y) {return x%y}
+}
+ 
+Calculator.prototype = new BaseCalculator()
+while(1)
+{
+var n1=parseInt(prompt("Enter the first number"))
+var n2=parseInt(prompt("Enter the second number"))
+var calc = new Calculator()
+
+var ch=prompt("Choose an Operation: \n1:ADD \n2:SUBTRACT \n3:MULTIPLY \n4:DIVIDE \n5:MOD")
+if (ch==1)
+alert(calc.add(n1,n2))
+if (ch==2)
+alert(calc.sub(n1,n2))
+if (ch==3)
+alert(calc.mul(n1,n2))
+if (ch==4)
+alert(calc.div(n1,n2))
+if (ch==5)
+alert(calc.mod(n1,n2))
+else
+break
+}
+</script></body></html>
