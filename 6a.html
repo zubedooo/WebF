@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+Show HTML: <input type="checkbox" ng-model="myVar">
+<div ng-show="myVar">
+<h1> Welcome to ng-show.</h1>
+Enter Your Name: <input ng-model="namee">
+<p><em>You entered: {{namee}}</em></p>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+	$scope.namee = "Behera";
+});
+</script>
+</body></html>
