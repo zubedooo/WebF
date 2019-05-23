@@ -1,3 +1,7 @@
+// npm init
+// in package.json goto script and include "start": "node 8a.js"
+// npm start
+// 
 function vowelCount(s){
     var vowel = {a:0, e:0, i:0, o:0, u:0}
     var t = s.split("")
@@ -20,8 +24,8 @@ function vowelCount(s){
     }
     return vowel
 }
-
-var s = prompt("Enter a string!")
+// var s = prompt("Enter a string!")
+var s = "Le Tour de France"
 var v = vowelCount(s)
 console.log(v)
-// console.log("a, e, i ,o and u, respectively, ", v.a, ", ", v.e, ", ", v.i, ", ", v.o, ", ", v.u, " times" )
+console.log("a, e, i ,o and u, respectively, ", v.a, ", ", v.e, ", ", v.i, ", ", v.o, ", ", v.u, " times" )
