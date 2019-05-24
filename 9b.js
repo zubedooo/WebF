@@ -31,16 +31,17 @@ mongoClient.connect("mongodb://127.0.0.1/myDB", function(err, db) {
 });
 
 //9b.html
+<!DOCTYPE html>
 <html>
-<head>
-<title>Placement</title>
-</head>
-<body>
-<form action="insert" method="get"><br>
-usn<input type="text" id="usn" name="usn"><br>
-name<input type="text" id="namee" name="namee"><br>
-company<input type="text" id="company" name="company"><br>
-<input type="submit" value="submit">
-</form>
-</body>
+    <head>
+        Student Form
+    </head>
+    <body>
+        <form action="insert" method="GET">
+            Name: <input type="text" name="name" /><br/>
+            Branch: <input type="text" name="branch" /><br/>
+            Semester: <input type="text" name="sem" /><br/>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
 </html>
