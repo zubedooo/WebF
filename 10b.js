@@ -45,3 +45,16 @@ res.end(JSON.stringify(data));
 app.listen(4009);
 }
 });
+
+//10b.html
+<html>
+<body>
+<form action="insert" method="get"><br>
+id<input type="text" id="id" name="id"><br>
+title<input type="text" id="title" name="title"><br>
+name<input type="text" id="namee" name="namee"><br>
+branch<input type="text" id="branch" name="branch"><br>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
