@@ -9,7 +9,7 @@ app.use(express.static('public'));
 
 app.get('/9b.html', function(req,res)
 {
-res.sendFile(__dirname+'/'+'9b.html');
+res.sendFile(__dirname+'/'+'8b.html');
 });
 
 app.get('/insert',function(req,res)
