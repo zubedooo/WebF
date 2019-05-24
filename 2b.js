@@ -31,3 +31,19 @@ res.end(JSON.stringify(req.body));
 });
 
 app.listen(4005);
+
+//2b.html
+<html>
+<head>
+<title>Student detail</title>
+</head>
+<body>
+<form action="insert" method="post">
+USN <input type="text" id="usn" name="usn"><br>
+Name <input type="text" id="namee" name="namee"><br>
+Branch <input type="text" id="branch" name="branch"><br>
+Marks <input type="text" id="marks" name="marks"><br>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
