@@ -1,45 +1,24 @@
-<html><body><script>
-var BaseCalculator = function() {
-   this.type="BaseCalc"
-   }
+<!DOCTYPE html>
+<html>
+<body>
 
-BaseCalculator.prototype = {
-   add: function(x, y)
-   {
-   	return x + y
-   },
-   sub: function(x, y)
-   {
-   	return x - y
-   }
+<h2>Prototype</h2>
+<script type="text/javascript">
+function calculator(num){
+    this.n=num;
 }
-
-var Calculator = function () {
-   this.type="Calc"
-   this.mul = function(x,y) {return x*y}
-   this.div = function(x,y) {return x/y}
-   this.mod = function(x,y) {return x%y}
+calculator.prototype.add=function(num){
+    this.n=this.n+num;
+    return this;
 }
- 
-Calculator.prototype = new BaseCalculator()
-while(1)
-{
-var n1=parseInt(prompt("Enter the first number"))
-var n2=parseInt(prompt("Enter the second number"))
-var calc = new Calculator()
-
-var ch=prompt("Choose an Operation: \n1:ADD \n2:SUBTRACT \n3:MULTIPLY \n4:DIVIDE \n5:MOD")
-if (ch==1)
-alert(calc.add(n1,n2))
-if (ch==2)
-alert(calc.sub(n1,n2))
-if (ch==3)
-alert(calc.mul(n1,n2))
-if (ch==4)
-alert(calc.div(n1,n2))
-if (ch==5)
-alert(calc.mod(n1,n2))
-else
-break
+calculator.prototype.sub=function(num){
+    this.n=this.n-num;
+    return this;
 }
-</script></body></html>
+calculator.prototype.answer=function(){
+    document.write(this.n);
+}
+var a= new calculator(10).add(3).add(3).sub(10).answer()
+</script>
+</body>
+</html> 
