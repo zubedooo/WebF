@@ -7,7 +7,7 @@ MongoClient.connect("mongodb://127.0.0.1/finalyear",function(err,db)
 console.log("we are connected");
 app.use(express.static('public'));
 
-app.get('/9b.html', function(req,res)
+app.get('/8b.html', function(req,res)
 {
 res.sendFile(__dirname+'/'+'8b.html');
 });
