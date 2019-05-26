@@ -8,7 +8,7 @@
             Name: <input type="text" name="name" required pattern="[a-zA-Z]+" /><br>
             Email: <input type="text" name="email" placeholder="example@domain.com" requires pattern="[a-zA-Z]([a-zA-Z0-9]*)@[a-zA-Z]([a-zA-Z]*)\.com" /><br>
             Phone: <input type="text" name="phone" placeholder="080-555-5555" required pattern="080-[0-9]{3}-[0-9]{4}" /> <br>
-            Semester: <input type="text" name="sem" required pattern="[1-8]" /> <br>
+            Semester: 1<input type="range" name="sem" min="1" max="8" value="1" />8 <br>
             Branch: <input list="branch" /> <br>
             <datalist id="branch">
                 <option value="Computer Science">
