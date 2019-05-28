@@ -5,7 +5,7 @@ var MongoClient=require('mongodb').MongoClient
 app.use(body.urlencoded({extended:false}))
 app.use(body.json())
 app.use(express.static('public'))
-MongoClient.connect("mongodb://127.0.0.1:27017/nodedb",function(err,db)
+MongoClient.connect("mongodb://127.0.0.1/nodedb",function(err,db)
 {
 	if(!err)
 	{
