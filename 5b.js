@@ -47,7 +47,7 @@ res.end(JSON.stringify(data));
 app.listen(4009);   }                
 });
 
-/i5b.html
+//i5b.html
 <html>
 <head>
 <title>Student Detail</title>
@@ -65,7 +65,6 @@ Grade: <input type="text" id="grade" name="grade"><br>
 </html>
 
 //u5b.html
-
 <html>
 <head>
 <title>Student detail</title>
