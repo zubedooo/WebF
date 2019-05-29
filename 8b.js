@@ -24,9 +24,8 @@ res.end(JSON.stringify(req.query));
 app.get('/displayInfosys',function(req,res)
 {
 db.collection('student').find({company:'infosys'}).count(function(err,count){
-console.log(count);
-db.collection('student').find({company:'infosys'}).sort().toArray(
-function(err,data){
+ console.log(count);
+db.collection('student').find({company:'infosys'}).sort().toArray(function(err,data){
 console.log(data);
 res.end("count is : "+count+" "+JSON.stringify(data));
 });
@@ -35,8 +34,7 @@ res.end("count is : "+count+" "+JSON.stringify(data));
 
 app.get('/display',function(req,res)
 {
-db.collection('student').find().sort().toArray(
-function(err,data){
+db.collection('student').find().sort().toArray(function(err,data){
 console.log(data);
 res.end(JSON.stringify(data));
 });
