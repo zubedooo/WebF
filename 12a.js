@@ -13,6 +13,6 @@ n = prompt("enter the number");
 p = test(n);
 p.then(function(fromResolve){
   console.log(fromResolve);
-}).catch(function(fromReject){
+});/*.catch(function(fromReject){
     console.log(fromReject);
-})
+})*/
