@@ -12,7 +12,7 @@ var Logger = (req, res, next)=>{
     next()
 }
 var visited = (req, res, next)=>{
-    console.log("No of times visited: , ${req.count}")
+    console.log('No of times visited: , ${req.count}')
     next()
 }
 app.use(Logger)
