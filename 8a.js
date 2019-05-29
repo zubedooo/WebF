@@ -30,7 +30,7 @@ read.question("Enter a string\n",str=>{
 var v=vowelCount(str);
 console.log(v.a,v.e,v.i,v.o,v.u);
 })
-/* var s = prompt("Enter a string!")
+/*
 var s = "Le Tour de France"
 var v = vowelCount(s)
 console.log(v)
