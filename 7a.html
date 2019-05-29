@@ -1,35 +1,22 @@
+<!DOCTYPE html>
 <html>
-<script src="angular/angular.min.js"></script>
-<body ng-app="myapp">
-	<div ng-controller="mycontroller">
-   	 
-    	<div>    
-    	<h3>Name: {{namee}}!</h3>
-    	<h3>Address: {{address}}!</h3>           	 
-    	<h3>Initial Company: {{::company}}!</h3>
-    	</div>
-   	 
-    	Name: <span ng-bind="namee"></span><br>
-    	Address:<span ng-bind="address"></span><br>
-    	<button  ng-click="change()">CHANGE</button>
-   	 
-	</div>
-    
-	<script type="text/javascript">
-var myapp=angular.module("myapp",[]);
-myapp.controller("mycontroller",function($scope)
-{
-
-	$scope.namee="Gaurav";
-	$scope.address="Bangalore";
-	$scope.company="Amazon";
-$scope.change=function(){
-
-	$scope.namee="Changed"+$scope.namee;
-	$scope.address="Changed"+$scope.address;
-	$scope.company="Changed"+$scope.company;
-    	};
-});
-</script>
-</body>
+    <head>
+        Student Form
+    </head>
+    <body>
+        <form>
+            Name: <input type="text" name="name" required pattern="[a-zA-Z]+" /><br>
+            Email: <input type="text" name="email" placeholder="example@domain.com" requires pattern="[a-zA-Z]([a-zA-Z0-9]*)@[a-zA-Z]([a-zA-Z]*)\.com" /><br>
+            Phone: <input type="text" name="phone" placeholder="080-555-5555" required pattern="080-[0-9]{3}-[0-9]{4}" /> <br>
+            Semester: <input type="text" name="sem" required pattern="[1-8]" /> <br>
+            Branch: <input list="branch" /> <br>
+            <datalist id="branch">
+                <option value="Computer Science">
+                <option value="Information Science">
+                <option value="Electronics and Communication">
+            </datalist>
+            Website: <input type="text" name="website" required pattern="(http\:\/\/|https\:\/\/)?([a-z0-9][a-z0-9\-])*" /> <br>
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
 </html>
