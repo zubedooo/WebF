@@ -19,13 +19,13 @@
 var myapp=angular.module("myapp",[]);
 myapp.controller("mycontroller",function($scope)
 {
-	$scope.namee="Gaurav";
-	$scope.address="Bangalore";
-	$scope.company="Amazon";
+	$scope.namee=prompt("Enter Name");
+	$scope.address=prompt("Enter Address");
+	$scope.company=prompt("Enter Company");
 $scope.change=function(){
-	$scope.namee=prompt("Enter New Name");
-	$scope.address=prompt("Enter New Address");
-	$scope.company=prompt("Enter New Company");
+	$scope.namee="Name Change";
+	$scope.address="Address Change";
+	$scope.company="Company Change";
     	};
 });
 </script>
