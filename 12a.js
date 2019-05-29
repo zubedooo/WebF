@@ -1,15 +1,18 @@
-function testNum(n){
-    var promise = Promise.resolve(n);
-    return promise;
+function test(n){
+  promise = new Promise(function(resolve, reject){
+    if (n>10){
+      resolve('number is greater than 10');
+    }
+    else {
+      reject('number is less than 10');
+    }
+  });
+return promise;
 }
-var n = prompt("Enter a number");
-var p = testNum(n);
-
-p.then(function(value) {
-    if(value>10){
-        console.log("Greater than 10");
-    }
-    else if(value<10){
-        console.log("Less than 10")
-    }
-});
+n = prompt("enter the number");
+p = test(n);
+p.then(function(fromResolve){
+  console.log(fromResolve);
+}).catch(function(fromReject){
+    console.log(fromReject);
+})
