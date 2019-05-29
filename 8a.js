@@ -24,8 +24,20 @@ function vowelCount(s){
     }
     return vowel
 }
-// var s = prompt("Enter a string!")
+const read=require('readline').createInterface({
+input:process.stdin,
+output:process.stdout
+})
+
+read.question('Enter a string' ,(str)=>{
+    
+console.log('String entered is $(str) )
+var d=test(str)
+console.log(d)
+})
+/* var s = prompt("Enter a string!")
 var s = "Le Tour de France"
 var v = vowelCount(s)
 console.log(v)
 console.log("a, e, i ,o and u, respectively, ", v.a, ", ", v.e, ", ", v.i, ", ", v.o, ", ", v.u, " times" )
+*/
