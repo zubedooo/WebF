@@ -1,65 +1,51 @@
 var express = require('express');
 var app = express();
 
-app.get('/6bindex.html', function(req, res) {
-    res.sendFile(__dirname+'/6bindex.html');
+app.get('/index.html', function(req, res) {
+    res.sendFile(__dirname+'/index.html');
 });
-app.get('/6bcse.html', function(req, res) {
-    res.sendFile(__dirname+'/6bcse.html');
+app.get('/cse.html', function(req, res) {
+    res.sendFile(__dirname+'/cse.html');
 });
-app.get('/6bise.html', function(req, res) {
-    res.sendFile(__dirname+'/6bise.html');
+app.get('/ise.html', function(req, res) {
+    res.sendFile(__dirname+'/ise.html');
 });
-app.get('/6bece.html', function(req, res) {
-    res.sendFile(__dirname+'/6bese.html');
+app.get('/ece.html', function(req, res) {
+    res.sendFile(__dirname+'/ese.html');
 });
 
 app.listen(3000);
 
 //index.html
-<!DOCTYPE html>
 <html>
-    <head>
-        <h1 style="color: blue">Home PAGE</h1>
-    </head>
-    <body>
-        <a href="6bcse.html"><h3>CSE</h3></a><br/>
-        <a href="6bise.html"><h3>ISE</h3></a><br/>
-	<a href="6bece.html"><h3>ECE</h3></a>
-    </body>
+<body bgcolor = "green">
+Hello please select your branch! 
+<a href = "cse.html">CSE</a>
+<a href = "ise.html">ISE</a>
+<a href = "ece.html">ECE</a>
+</body>
 </html>
 
-//6bcse.html
-<!DOCTYPE html>
+//cse.html
 <html>
-    <head>
-        <h1 style="color: blue">Computer Science</h1>
-    </head>
-    <body>
-        <p style="color: green; font-family:verdana; font-size:120%"; >This is CSE Dep.</p><br/>
-        <a href="6bindex.html"><h3>Home</h3></a>
-    </body>
+<body bgcolor = "red">
+<font face="verdana">CSE - Welcome to CSE</font>
+<a href = "index.html">Back</a>
+</body>
 </html>
 
-//6bise.html
-<!DOCTYPE html>
+//ise.html
 <html>
-    <head>
-        <h1 style="color: red">ISE</h1>
-    </head>
-    <body>
-        <p style="color: yellow; font-family:courier; font-size:150%;">This is ISE Dept</p>
-        <a href="6bindex.html"><h3>Home</h3></a>
-    </body>
+<body bgcolor = "blue">
+<font face = "Calibri">ISE - Welcome to ISE</font>
+<a href = "index.html">Back</a>
+</body>
 </html>
-//6bece.html
-<!DOCTYPE html>
+
+//ece.html
 <html>
-    <head>
-        <h1 style="color: blue">ECE Branch</h1>
-    </head>
-    <body>
-        <p style="color: magenta; font-family:verdana; font-size:120%"; >This is ECE Dep.</p><br/>
-        <a href="6bindex.html"><h3>Home</h3></a>
-    </body>
+<body bgcolor = "yellow">
+ECE - Welcome to ECE
+<a href = "index.html">Back</a>
+</body>
 </html>
