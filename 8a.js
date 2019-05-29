@@ -24,16 +24,11 @@ function vowelCount(s){
     }
     return vowel
 }
-const read=require('readline').createInterface({
-input:process.stdin,
-output:process.stdout
-})
-
-read.question('Enter a string' ,(str)=>{
-    
-console.log('String entered is ' ,$(str) )
-var d=test(str)
-console.log(d)
+const read=require("readline").createInterface({
+input:process.stdin,output:process.stdout})
+read.question("Enter a string\n",str=>{
+var v=vowelCount(str);
+console.log(v.a,v.e,v.i,v.o,v.u);
 })
 /* var s = prompt("Enter a string!")
 var s = "Le Tour de France"
