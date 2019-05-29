@@ -30,14 +30,14 @@ Hello
 //karnataka.html
 <html>
 <body bgcolor = "blue">
-KARANATAKA - You are now in Hampi
+<font face = "Calibri">KARANATAKA - You are now in Hampi</font>
 </body>
 </html>
 
 //delhi.html
 <html>
 <body bgcolor = "red">
-DELHI - Welcome to Red Fort
+<font face="verdana">DELHI - Welcome to Red Fort</font>
 </body>
 </html>
 
