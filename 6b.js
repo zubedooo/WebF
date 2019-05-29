@@ -1,49 +1,65 @@
-var express = require('express')
-var app = express()
-app.use(express.static('public'))
+var express = require('express');
+var app = express();
 
-app.get('/', function(req, res){
-	res.sendFile(__dirname + '/index.html')
-})
-app.get('/karnataka.html', function(req, res){
-	res.sendFile(__dirname + '/karnataka.html')
-})
-app.get('/maharastra.html', function(req, res){
-	res.sendFile(__dirname + '/maharastra.html')
-})
+app.get('/6bindex.html', function(req, res) {
+    res.sendFile(__dirname+'/6bindex.html');
+});
+app.get('/6bcse.html', function(req, res) {
+    res.sendFile(__dirname+'/6bcse.html');
+});
+app.get('/6bise.html', function(req, res) {
+    res.sendFile(__dirname+'/6bise.html');
+});
+app.get('/6bece.html', function(req, res) {
+    res.sendFile(__dirname+'/6bese.html');
+});
 
-app.get('/delhi.html', function(req, res){
-	res.sendFile(__dirname + '/delhi.html')
-})
-var server = app.listen(5000)
+app.listen(3000);
 
 //index.html
+<!DOCTYPE html>
 <html>
-<body bgcolor = "green">
-Hello
-<a href = "karnataka.html">Karnataka</a>
-<a href = "delhi.html">Delhi</a>
-<a href = "maharashtra.html">Maharashtra</a>
-</body>
+    <head>
+        <h1 style="color: blue">Home PAGE</h1>
+    </head>
+    <body>
+        <a href="6bcse.html"><h3>CSE</h3></a><br/>
+        <a href="6bise.html"><h3>ISE</h3></a><br/>
+	<a href="6bece.html"><h3>ECE</h3></a>
+    </body>
 </html>
 
-//karnataka.html
+//6bcse.html
+<!DOCTYPE html>
 <html>
-<body bgcolor = "blue">
-<font face = "Calibri">KARANATAKA - You are now in Hampi</font>
-</body>
+    <head>
+        <h1 style="color: blue">Computer Science</h1>
+    </head>
+    <body>
+        <p style="color: green; font-family:verdana; font-size:120%"; >This is CSE Dep.</p><br/>
+        <a href="6bindex.html"><h3>Home</h3></a>
+    </body>
 </html>
 
-//delhi.html
+//6bise.html
+<!DOCTYPE html>
 <html>
-<body bgcolor = "red">
-<font face="verdana">DELHI - Welcome to Red Fort</font>
-</body>
+    <head>
+        <h1 style="color: red">ISE</h1>
+    </head>
+    <body>
+        <p style="color: yellow; font-family:courier; font-size:150%;">This is ISE Dept</p>
+        <a href="6bindex.html"><h3>Home</h3></a>
+    </body>
 </html>
-
-//maharashtra.html
+//6bece.html
+<!DOCTYPE html>
 <html>
-<body bgcolor = "yellow">
-MAHARASHTRA - Home of Mumbai Indians
-</body>
+    <head>
+        <h1 style="color: blue">ECE Branch</h1>
+    </head>
+    <body>
+        <p style="color: magenta; font-family:verdana; font-size:120%"; >This is ECE Dep.</p><br/>
+        <a href="6bindex.html"><h3>Home</h3></a>
+    </body>
 </html>
