@@ -1,34 +1,35 @@
 <html>
-    <script src="angular/angular.min.js"></script>
-    <body ng-app='myApp'>                                                           <!--myApp's Container Start-->
-        <div ng-controller='myCtr'>                                                     <!--myCtr's Container Start -->
-            <div>
-                <h3>Name: {{namee}}!</h3>
-                <h3>Address: {{addr}}!</h3>
-                <h3>Company: {{company}}!</h3>
-            </div>                                                                      <!--myCtr's Container End-->
-            Name: <input ng-model="namee"><br>                                     <!--span is to hook the content from ng-bind-->
-            Address: <input ng-model="addr"><br>                                   <!--ng-bind tells to replace the html content to a given variable or expression-->
-            Company: <input ng-model="company"><br>   
-            Change: 
-            Name: <input ng-model="name1"><br>                                     <!--span is to hook the content from ng-bind-->
-            Address: <input ng-model="addr1"><br>                        <!--the ng-bind here binds the variable in quotes "contained" in the controller scope-->
-            <button ng-click="change()">Change</button>  
-                                           <!--ng-click is basically like a "on click"-->
-        </div>
-        <script type="text/javascript">
-            var myApp = angular.module("myApp", []);                                    //javascript so has to change comment style. xD
-            myApp.controller("myCtr", function($scope) {                                //'$scope' can be considered as the scope of a function in other languages
-                $scope.namee = "";                                                    //The scope is of a controller in Angular thus in our case of 'myCtr' and can be thus,
-                $scope.addr = "";                                                   //used anywhere where the controller's container is used.
-                $scope.company = "";
-                $scope.name1 = "";                                                    //The scope is of a controller in Angular thus in our case of 'myCtr' and can be thus,
-                $scope.addr1 = "";
-                $scope.change = function(){
-                    $scope.namee = $scope.name1;
-                    $scope.addr = $scope.addr1
-                }
-            });
-        </script>
-    </body>                                                                        <!--myApp's Container End-->                      
+<script src="angular/angular.min.js"></script>
+<body ng-app="myapp">
+	<div ng-controller="mycontroller">
+   	 
+    	<div>    
+    	<h3>Name: {{namee}}!</h3>
+    	<h3>Address: {{address}}!</h3>           	 
+    	<h3>Initial Company: {{::company}}!</h3>
+    	</div>
+   	 
+    	Name: <span ng-bind="namee"></span><br>
+    	Address:<span ng-bind="address"></span><br>
+    	<button  ng-click="change()">CHANGE</button>
+   	 
+	</div>
+    
+	<script type="text/javascript">
+var myapp=angular.module("myapp",[]);
+myapp.controller("mycontroller",function($scope)
+{
+
+	$scope.namee="Gaurav";
+	$scope.address="Bangalore";
+	$scope.company="Amazon";
+$scope.change=function(){
+
+	$scope.namee="Changed"+$scope.namee;
+	$scope.address="Changed"+$scope.address;
+	$scope.company="Changed"+$scope.company;
+    	};
+});
+</script>
+</body>
 </html>
