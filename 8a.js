@@ -31,7 +31,7 @@ output:process.stdout
 
 read.question('Enter a string' ,(str)=>{
     
-console.log('String entered is ' $(str) )
+console.log('String entered is ' ,$(str) )
 var d=test(str)
 console.log(d)
 })
