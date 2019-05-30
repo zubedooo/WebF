@@ -25,8 +25,7 @@ res.end(JSON.stringify(req.query));
 
 app.get('/displayProfessor',function(req,res)
 {
-db.collection('department').find({branch:'cse',title:'professor'}).sort().toArray(
-function(err,data){
+db.collection('department').find({branch:'cse',title:'professor'}).sort().toArray(function(err,data){
 console.log(data);
 res.end(JSON.stringify(data));
 });
@@ -35,8 +34,7 @@ res.end(JSON.stringify(data));
 
 app.get('/display',function(req,res)
 {
-db.collection('department').find().sort().toArray(
-function(err,data){
+db.collection('department').find().sort().toArray(function(err,data){
 console.log(data);
 res.end(JSON.stringify(data));
 });
